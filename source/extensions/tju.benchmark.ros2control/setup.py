@@ -11,7 +11,8 @@ EXTENSION_TOML_DATA = toml.load(os.path.join(EXTENSION_PATH, "config", "extensio
 # Minimum dependencies required prior to installation
 INSTALL_REQUIRES = [
     # generic
-    "numpy<2"
+    "numpy<2",
+    "pyyaml",
 ]
 
 PYTORCH_INDEX_URL = ["https://download.pytorch.org/whl/cu118"]
@@ -30,7 +31,7 @@ setup(
     python_requires=">=3.10",
     install_requires=INSTALL_REQUIRES,
     dependency_links=PYTORCH_INDEX_URL,
-    packages=["omni.isaac.lab"],
+    packages=["tju.benchmark.ros2control"],
     classifiers=[
         "Natural Language :: English",
         "Programming Language :: Python :: 3.10",
