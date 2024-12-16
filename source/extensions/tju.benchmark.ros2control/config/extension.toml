@@ -1,0 +1,30 @@
+[package]
+
+version = "0.1.0"
+
+# Description
+title = "Sim Ros2 Control for TJU Benchmark Tool"
+description="Extension providing robot control adapter"
+readme  = "docs/README.md"
+repository = "https://https://github.com/SRIAS-MLLM-Robots/IsaacLab"
+category = "robotics"
+keywords = ["robotics", "learning", "ai"]
+
+[dependencies]
+"omni.isaac.core" = {}
+
+[python.pipapi]
+requirements = [
+    "numpy",
+    "toml",
+]
+
+modules = [
+    "numpy",
+    "toml",
+]
+
+use_online_index=true
+
+[[python.module]]
+name = "tju.benchmark.ros2control"
